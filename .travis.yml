@@ -2,3 +2,9 @@ language: node_js
 node_js:
   - "0.10"
   - "0.12"
+deploy:
+  provider: openshift
+  user: $OPENSHIFT_USERNAME
+  password: $OPENSHIFT_PASSWORD
+  app: $OPENSHIFT_APP
+  domain: $OPENSHIFT_DOMAIN
