@@ -5,7 +5,10 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('justchat:server');
+var Logger = require('le_node');
+var log = new Logger({token:'ec017ecc-4662-4629-bce1-455305c0e3d7'});
+//var debug = require('debug')('justchat:server');
+var debug = log;
 var http = require('http');
 
 /**
