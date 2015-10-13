@@ -7,8 +7,7 @@
 var app = require('../app');
 var Logger = require('le_node');
 var log = new Logger({token:'d2b7d983-73fb-4d29-ac26-c020748a4f38'});
-//var debug = require('debug')('justchat:server');
-var debug = log;
+var debug = require('debug')('justchat:server');
 var http = require('http');
 
 /**
@@ -31,6 +30,7 @@ var server = http.createServer(app);
 
 server.listen(port, app.get('ipaddress'), function() {
   debug('Express server listening on port ' + server.address().port);
+  log.info("le_node start");
 });
 
 server.on('error', onError);
